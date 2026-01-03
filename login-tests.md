@@ -1,17 +1,32 @@
-## CT-LOGIN-01 – Login com e-mail e senha válidos
+# Login Test Cases
 
-**Objetivo:** Validar que o usuário consegue realizar login com credenciais válidas.
+## CT-LOGIN-001 - Login com email e senha válidos
+GIVEN usuário cadastrado  
+WHEN informa email e senha válidos  
+THEN sistema permite acesso  
 
-**Pré-condição:** Usuário previamente cadastrado no sistema.
+Expected Result: Usuário logado  
+Actual Result: Usuário logado  
+Status: PASS  
 
-**Passos:**
-1. Acessar a tela de login
-2. Informar e-mail válido
-3. Informar senha válida
-4. Clicar em "Entrar"
+---
 
-**Resultado esperado:** Sistema autentica o usuário e redireciona para a área logada.
+## CT-LOGIN-002 - Login com senha incorreta
+GIVEN usuário cadastrado  
+WHEN informa senha inválida  
+THEN sistema exibe mensagem de erro  
 
-**Resultado obtido:** Sistema autenticou e redirecionou corretamente.
+Expected Result: Sistema bloqueia login  
+Actual Result: Sistema exibe mensagem de erro  
+Status: PASS  
 
-**Status:** PASS
+---
+
+## CT-LOGIN-003 - Login com email inexistente
+GIVEN usuário não cadastrado  
+WHEN informa email inexistente  
+THEN sistema exibe mensagem de erro  
+
+Expected Result: Sistema bloqueia login  
+Actual Result: Sistema permite login  
+Status: FAIL  
