@@ -17,9 +17,12 @@ All test cases are written in a clear and structured way, simulating real-world 
 - Input validation
 - Error messages and edge cases
 
-## 📂 Repository Structure
-- `login-cadastro-testes.md`  
-  Contains manual test cases for login and user registration flows.
+## 📁 Repository Structure
+qa-test-cases/
+├── login/
+│   └── login-tests.md
+└── signup/
+    └── signup-tests.md
 
 ## 🛠 Tools & Concepts
 - Manual Testing
