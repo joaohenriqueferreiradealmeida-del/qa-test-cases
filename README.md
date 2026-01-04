@@ -19,10 +19,10 @@ All test cases are written in a clear and structured way, simulating real-world 
 
 ## 📁 Repository Structure
 qa-test-cases/
-├── login/
-│   └── login-tests.md
-└── signup/
-    └── signup-tests.md
+login/
+└── login-tests.md
+signup/
+└── signup-tests.md
 
 ## 🛠 Tools & Concepts
 - Manual Testing
