@@ -1,31 +1,33 @@
 # QA Test Cases Portfolio
 
-This repository contains manual QA test cases created for study and portfolio purposes.
+This repository contains manual test cases created for study and portfolio purposes.
 
-## Scope
-The test cases cover functional validation and negative scenarios for:
+## 📌 About this project
+The goal of this repository is to demonstrate my understanding of:
+- Software testing fundamentals
+- Manual test case writing
+- Bug-oriented thinking
+- QA documentation best practices
+
+All test cases are written in a clear and structured way, simulating real-world scenarios.
+
+## 🧪 Test Scenarios Covered
 - User Login
 - User Registration (Sign Up)
-- Field validations
-- Error handling and messages
+- Input validation
+- Error messages and edge cases
 
-## Structure
-Each file represents a functional area of the system:
+## 📂 Repository Structure
+- `login-cadastro-testes.md`  
+  Contains manual test cases for login and user registration flows.
 
-- `login-tests.md` → Login test cases
-- `signup-tests.md` → User registration test cases
-- `checkout-tests.md` → Checkout and payment flows (future)
-- `api-tests.md` → API test cases (future)
+## 🛠 Tools & Concepts
+- Manual Testing
+- Functional Testing
+- Positive and Negative Scenarios
+- Test Case Documentation
 
-## Test Type
-- Manual testing
-- Functional testing
-- Negative and positive scenarios
+## 🚀 About Me
+I am transitioning into the QA (Quality Assurance) field and continuously improving my skills through practice, courses, and hands-on projects.
 
-## Tools Used
-- Test case design techniques
-- GitHub for version control and portfolio presentation
-
----
-
-Created by João Ferreira – QA Manual
+This repository will be updated with new test cases and scenarios over time.
