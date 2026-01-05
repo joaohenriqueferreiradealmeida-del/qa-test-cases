@@ -1,3 +1,20 @@
+# Test Cases – Login
+
+## Objective
+Validate the login functionality to ensure that only registered users with valid credentials can access the system, and that appropriate error messages are displayed for invalid scenarios.
+
+## Scope
+These test cases cover functional, negative, and validation scenarios related to the user login feature.
+
+## Preconditions
+- User is on the login page
+- System is online and accessible
+- User account exists in the system (when applicable)
+
+---
+
+## Test Cases
+
 TC-LOGIN-01 – Login with valid email and valid password
 
 Type: Positive Flow
