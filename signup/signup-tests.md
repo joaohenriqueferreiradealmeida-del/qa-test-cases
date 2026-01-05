@@ -22,10 +22,13 @@ These test cases cover functional and negative scenarios related to user registr
 4. Confirm the same password
 5. Click the "Sign Up" button
 
-**Expected Result:**
-- User account is created successfully
-- User receives a confirmation message or is redirected to login/dashboard
-
+{
+  "id": "TC-SIGNUP-01",
+  "type": "Positive Flow",
+  "expected_result": "Account created successfully",
+  "http_status_expected": 201,
+  "status": "PASS"
+}
 ---
 
 ### TC-SIGNUP-02 – Registration with already registered email
@@ -36,10 +39,14 @@ These test cases cover functional and negative scenarios related to user registr
 4. Confirm the same password
 5. Click the "Sign Up" button
 
-**Expected Result:**
-- System displays a message indicating the email is already registered
-- Account is not created
-
+{
+  "id": "TC-SIGNUP-02",
+  "type": "Business Rule Validation",
+  "conflict_field": "email",
+  "expected_result": "Error: 'Email already registered'",
+  "status_code": 409,
+  "status": "FAIL"
+}
 ---
 
 ### TC-SIGNUP-03 – Registration with weak password
@@ -50,10 +57,13 @@ These test cases cover functional and negative scenarios related to user registr
 4. Confirm the same password
 5. Click the "Sign Up" button
 
-**Expected Result:**
-- System displays a password strength validation message
-- Account is not created
-
+{
+  "id": "TC-SIGNUP-03",
+  "type": "Security Constraint",
+  "rule": "min_length: 8",
+  "expected_result": "System rejects weak password",
+  "status": "FAIL"
+}
 ---
 
 ### TC-SIGNUP-04 – Registration with mismatched passwords
@@ -64,10 +74,13 @@ These test cases cover functional and negative scenarios related to user registr
 4. Enter a different password in confirmation
 5. Click the "Sign Up" button
 
-**Expected Result:**
-- System displays a message indicating passwords do not match
-- Account is not created
-
+{
+  "id": "TC-SIGNUP-04",
+  "type": "Data Integrity",
+  "validation": "password_confirmation",
+  "expected_result": "Error: 'Passwords do not match'",
+  "status": "PASS"
+}
 ---
 
 ### TC-SIGNUP-05 – Registration with invalid email format
@@ -78,10 +91,13 @@ These test cases cover functional and negative scenarios related to user registr
 4. Confirm the same password
 5. Click the "Sign Up" button
 
-**Expected Result:**
-- System displays an invalid email format message
-- Account is not created
-
+{
+  "id": "TC-SIGNUP-05",
+  "type": "Negative Flow",
+  "expected_result": "Invalid email format message",
+  "status_code": 400,
+  "status": "FAIL"
+}
 ---
 
 ### TC-SIGNUP-06 – Registration with empty required fields
@@ -89,6 +105,10 @@ These test cases cover functional and negative scenarios related to user registr
 1. Leave one or more required fields empty
 2. Click the "Sign Up" button
 
-**Expected Result:**
-- System displays required field validation messages
-- Account is not created
+{
+  "id": "TC-SIGNUP-06",
+  "type": "Field Validation",
+  "fields": ["name", "email", "password"],
+  "expected_result": "Required field messages displayed",
+  "status": "FAIL"
+}
