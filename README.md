@@ -18,11 +18,19 @@ All test cases are written in a clear and structured way, simulating real-world 
 - Error messages and edge cases
 
 ## 📁 Repository Structure
-qa-test-cases/
-login/
-└── login-tests.md
-signup/
-└── signup-tests.md
+{
+  "project": "qa-test-cases",
+  "modules": [
+    {
+      "path": "login/",
+      "description": "Cenários de validação de credenciais e segurança de sessão"
+    },
+    {
+      "path": "signup/",
+      "description": "Validação de integridade de dados e criação de novos perfis"
+    }
+  ]
+}
 
 ## 🛠 Tools & Concepts
 - Manual Testing
