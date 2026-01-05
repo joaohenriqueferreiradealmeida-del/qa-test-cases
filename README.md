@@ -18,9 +18,10 @@ All test cases are written in a clear and structured way, simulating real-world 
 - Error messages and edge cases
 
 ## 📁 Repository Structure
+
 {
   "project": "qa-test-cases",
-  "modules": [
+  "modules":
     {
       "path": "login/",
       "description": "Cenários de validação de credenciais e segurança de sessão"
@@ -29,7 +30,6 @@ All test cases are written in a clear and structured way, simulating real-world 
       "path": "signup/",
       "description": "Validação de integridade de dados e criação de novos perfis"
     }
-  ]
 }
 
 ## 🛠 Tools & Concepts
