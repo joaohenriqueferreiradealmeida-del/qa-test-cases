@@ -21,9 +21,13 @@ These test cases cover functional and negative scenarios related to the user log
 2. Enter a valid password
 3. Click the "Login" button
 
-**Expected Result:**
-- User is successfully logged in
-- User is redirected to the dashboard
+{
+  "id": "TC-LOGIN-01",
+  "type": "Positive Flow",
+  "expected_result": "Success",
+  "status_code": 200,
+  "action": "User redirected to dashboard"
+}
 
 ---
 
@@ -33,9 +37,13 @@ These test cases cover functional and negative scenarios related to the user log
 2. Enter a valid password
 3. Click the "Login" button
 
-**Expected Result:**
-- System displays an error message indicating invalid email format
-- User is not logged in
+{
+  "id": "TC-LOGIN-02",
+  "type": "Negative Flow",
+  "input_error": "Malformed Email",
+  "expected_result": "Validation Error: 'Invalid email format'",
+  "status": "FAIL"
+}
 
 ---
 
@@ -45,9 +53,13 @@ These test cases cover functional and negative scenarios related to the user log
 2. Enter an incorrect password
 3. Click the "Login" button
 
-**Expected Result:**
-- System displays an authentication error message
-- User is not logged in
+{
+  "id": "TC-LOGIN-03",
+  "type": "Security Validation",
+  "expected_result": "Authentication Error",
+  "status_code": 401,
+  "status": "FAIL"
+}
 
 ---
 
@@ -57,9 +69,12 @@ These test cases cover functional and negative scenarios related to the user log
 2. Leave the password field empty
 3. Click the "Login" button
 
-**Expected Result:**
-- System displays a required field validation message
-- User is not logged in
+{
+  "id": "TC-LOGIN-04",
+  "type": "Constraint Validation",
+  "expected_result": "Required field message displayed",
+  "status": "FAIL"
+}
 
 ---
 
@@ -69,6 +84,10 @@ These test cases cover functional and negative scenarios related to the user log
 2. Enter any password
 3. Click the "Login" button
 
-**Expected Result:**
-- System displays a message indicating user not found
-- User is not logged in
+{
+  "id": "TC-LOGIN-05",
+  "type": "Business Rule",
+  "expected_result": "User not found error",
+  "status_code": 404,
+  "status": "FAIL"
+}
