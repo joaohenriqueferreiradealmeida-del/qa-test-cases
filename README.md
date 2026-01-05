@@ -24,6 +24,7 @@ qa-test-cases/
 │   └── login-tests.md
 ├── signup/             # Signup / registration test cases
 │   └── signup-tests.md
+├── bug-reports.md      # Sample bug reports identified during testing
 └── README.md           # Project documentation
 
 ## 🛠 Tools & Concepts
