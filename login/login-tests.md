@@ -1,4 +1,4 @@
-# Login – Test Cases
+# Test Cases - Login
 
 ## Objective
 Validate the login functionality to ensure that only registered users with valid credentials can access the system, and that proper error messages are displayed for invalid scenarios.
