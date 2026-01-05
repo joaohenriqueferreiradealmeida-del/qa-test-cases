@@ -5,11 +5,11 @@ This repository contains manual test cases created for study and portfolio purpo
 ## 📌 About this project
 The goal of this repository is to demonstrate my understanding of:
 - Software testing fundamentals
-- Manual test case writing
-- Bug-oriented thinking
+- Manual test case design
+- Bug-oriented and user-focused thinking
 - QA documentation best practices
 
-All test cases are written in a clear and structured way, simulating real-world scenarios.
+The test cases are written to reflect real-world QA scenarios, focusing on clarity, coverage, and business rules validation.
 
 ## 🧪 Test Scenarios Covered
 - User Login
@@ -29,10 +29,13 @@ qa-test-cases/
 ## 🛠 Tools & Concepts
 - Manual Testing
 - Functional Testing
-- Positive and Negative Scenarios
-- Test Case Documentation
+- Positive, Negative and Edge Case Scenarios
+- Test Case Design Techniques
+- QA Documentation
 
 ## 🚀 About Me
-I am transitioning into the QA (Quality Assurance) field and continuously improving my skills through practice, courses, and hands-on projects.
+I am transitioning into the QA (Quality Assurance) field, focusing on manual testing and test case design.
 
-This repository will be updated with new test cases and scenarios over time.
+I am building this portfolio to demonstrate my ability to analyze requirements, think critically about edge cases, and document test scenarios in a clear and structured way.
+
+This repository will continue to evolve as I expand my knowledge and practical experience in QA.
