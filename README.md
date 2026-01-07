@@ -20,12 +20,18 @@ The test cases are written to reflect real-world QA scenarios, focusing on clari
 ## 📁 Repository Structure
 
 qa-test-cases/
-├── login/              # Login feature test cases
+├── cart/
+│   └── cart-tests.md
+├── checkout/
+│   └── checkout-payment-tests.md
+├── login/
 │   └── login-tests.md
-├── signup/             # Signup / registration test cases
+├── signup/
 │   └── signup-tests.md
-├── bug-reports.md      # Sample bug reports identified during testing
-└── README.md           # Project documentation
+├── upload/
+│   └── upload-tests.md
+├── README.md
+└── bug-reports.md
 
 ## 🛠 Tools & Concepts
 - Manual Testing
