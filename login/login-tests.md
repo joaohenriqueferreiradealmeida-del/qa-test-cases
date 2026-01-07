@@ -1,104 +1,114 @@
-# Test Cases – Login
+Test Cases – Login (Security & Business Rules)
 
-## Objective
-Validate the login functionality to ensure that only registered users with valid credentials can access the system, and that appropriate error messages are displayed for invalid scenarios.
+Objective:
+Validate the login functionality with emphasis on security rules, account lockout behavior, and correct system responses after failed authentication attempts.
 
-## Scope
-These test cases cover functional, negative, and validation scenarios related to the user login feature.
+Scope:
+These test cases cover positive flows, negative scenarios, and security-related behaviors for the user login feature.
 
-## Preconditions
+Preconditions:
 - User is on the login page
 - System is online and accessible
-- User account exists in the system (when applicable)
+- User account exists in the system (unless stated otherwise)
 
 ---
 
-## Test Cases
+Test Cases
 
-TC-LOGIN-01 – Login with valid email and valid password
+TC-LOGIN-01 – Login with valid credentials
 
-Type: Positive Flow
-
-Preconditions:
-- User is on login page
-- User is registered
-  
 Steps:
-1. Enter a valid email
-2. Enter a valid password
+1. Enter a valid registered email
+2. Enter the correct password
 3. Click the "Login" button
-   
-Test Data:
-- Email: user@example.com
-- Password: ValidPassword123
-  
+
 Expected Result:
 User is successfully authenticated and redirected to the dashboard.
 
-Status: Not Executed
-
 ---
 
-TC-LOGIN-02 – Login with invalid email format
-
-Type: Negative Flow
+TC-LOGIN-02 – Login with invalid password
 
 Steps:
-1. Enter an invalid email format (without "@")
-2. Enter a valid password
-3. Click the "Login" button
-   
-Expected Result:
-System displays validation message: "Invalid email format" and login is blocked.
-
-Status: Not Executed
-
----
-
-TC-LOGIN-03 – Login with valid email and invalid password
-
-Type: Security Validation
-
-Steps:
-1. Enter a valid email
+1. Enter a valid registered email
 2. Enter an incorrect password
 3. Click the "Login" button
 
 Expected Result:
-System denies access and displays authentication error message.
+System displays an authentication error message indicating invalid credentials.
 
-Status: Not Executed
+--- 
 
----
-
-TC-LOGIN-04 – Login with empty password field
-
-Type: Constraint Validation
+TC-LOGIN-03 – Account lockout after three consecutive failed attempts
 
 Steps:
 1. Enter a valid email
-2. Leave password field empty
-3. Click the "Login" button
+2. Enter an incorrect password
+3. Repeat the process three consecutive times
 
 Expected Result:
-System displays required field validation message.
-
-Status: Not Executed
+User account is temporarily blocked after the third failed attempt, and a lockout message is displayed.
 
 ---
 
-TC-LOGIN-05 – Login with non-registered email
-
-Type: Business Rule
+TC-LOGIN-04 – Login attempt during account lockout period
 
 Steps:
-1. Enter a non-registered email
-2. Enter any password
+1. Enter a valid email for a blocked account
+2. Enter the correct password
 3. Click the "Login" button
 
 Expected Result:
-System displays error message indicating user not found.
+System prevents login and displays a message informing the user that the account is temporarily blocked.
 
-Status: Not Executed
+---
+
+TC-LOGIN-05 – Login before lockout time expires
+
+Steps:
+1. Trigger account lockout
+2. Attempt login before the lockout duration has elapsed
+
+Expected Result:
+System does not allow login and maintains the account in blocked status.
+
+---
+
+TC-LOGIN-06 – Login after lockout period expires
+
+Steps:
+1. Trigger account lockout
+2. Wait until the lockout time expires
+3. Enter valid credentials
+4. Click the "Login" button
+
+Expected Result:
+User is successfully authenticated, and the account lockout is lifted.
+
+---
+
+TC-LOGIN-07 – Reset of failed attempt counter after successful login
+
+Steps:
+1. Enter incorrect password twice
+2. Enter correct credentials on the third attempt
+3. Logout
+4. Attempt login again with an incorrect password
+
+Expected Result:
+Failed attempt counter is reset after successful login, and account is not blocked prematurely.
+
+---
+
+TC-LOGIN-08 – Account remains blocked if browser is closed
+
+Steps:
+1. Trigger account lockout
+2. Close the browser
+3. Reopen the browser
+4. Attempt login with valid credentials
+
+Expected Result:
+Account remains blocked until the lockout period expires.
 
 ---
