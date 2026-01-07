@@ -32,3 +32,42 @@ of authentication features (Login and Sign Up), simulating real-world QA activit
 **Severity:** High  
 **Priority:** High  
 **Status:** Open
+
+---
+
+## BUG-LOGIN-02 - Login allows access with invalid password
+
+**Environment:**
+- Web application
+- Browser: Chrome
+
+**Precondition**
+- User is on teh login page
+- User account exists in the system
+
+**Steps to Reproduce**
+1. Enter a valid registered email
+2. Enter an invalid password
+3. Click on the "Login" button
+
+**Test Data:**
+- Email: valid registered email
+- Password: invalid password
+
+**Expected Result:**
+- System should block login
+- Error message should be displayed indicating invalid credentials
+
+**Actual Result:**
+- System allows login with invalid password
+
+**Status**
+- Open
+
+**Severity:**
+- Critical
+
+**Priority:**
+- High
+
+---
