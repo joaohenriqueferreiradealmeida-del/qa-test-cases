@@ -1,12 +1,12 @@
 **System Unavailability – Test Cases**
 
-**Objective**
+**Objective:**
 Validate system behavior during service downtime, ensuring proper error handling, user-friendly messaging, and prevention of technical error exposure.
 
-**Scope**
+**Scope:**
 These test cases cover scenarios where the system is unavailable, including full downtime and internal server errors (HTTP 500).
 
-**Preconditions**
+**Preconditions:**
 - System may be partially or fully unavailable
 - User attempts to access public pages (home, login, signup)
 
