@@ -1,12 +1,12 @@
 **API Test Cases – User Registration (Sign Up)**
 
-**Objective**
+**Objective:**
 Validate the user registration API to ensure that new users can be created successfully with valid data and that the system properly handles validation rules, HTTP methods, and error scenarios.
 
-**Scope**
+**Scope:**
 These test cases cover positive and negative scenarios related to the user registration API endpoint.
 
-**Preconditions**
+**Preconditions:**
 - API is available and accessible
 - Endpoint /cadastro is active
 - Test environment is properly configured
