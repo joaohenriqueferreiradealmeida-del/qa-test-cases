@@ -7,9 +7,9 @@ Validate system protection against common security vulnerabilities and ensure se
 These test cases focus on authentication security, input validation, and access control based on OWASP fundamentals.
 
 **Preconditions:**
-Application is accessible
-Test user accounts with different permission levels exist
-Manual testing tools or browser DevTools available
+- Application is accessible
+- Test user accounts with different permission levels exist
+- Manual testing tools or browser DevTools available
 
 ---
 
