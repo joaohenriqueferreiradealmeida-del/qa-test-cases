@@ -286,3 +286,160 @@ When login fails, the system displays a technical error message (e.g., HTTP 500,
 **Attachments:** Screenshot
 
 ---
+
+**Bug Reports – User Registration & Authentication**
+**Objective:**
+Identify functional, validation, and error-handling issues in the user registration and authentication flows, ensuring data integrity, security, and proper user feedback.
+
+**Scope:**
+These bug reports cover registration and login scenarios, including input validation, business rules, and system error handling.
+
+**Preconditions:**
+- System is online and accessible
+- Registration and login pages are available
+- User has access to a supported browser
+
+---
+
+**BUG-01 – System allows registration with an already registered email**
+
+**Description:**
+The system allows a new user to register using an email address that already exists in the database.
+
+**Steps to Reproduce:**
+1. Access the registration page
+2. Enter an email that is already registered
+3. Enter a valid password
+4. Click on "Register"
+
+**Expected Result:**
+The system should block the registration and display a message indicating that the email is already in use.
+
+**Actual Result:**
+The system allows the registration and redirects the user to the home page.
+
+**Severity:** Medium
+**Priority:** Low
+**Status:** Open
+**Attachments:** Video showing duplicate email registration
+
+---
+
+**BUG-02 – Registration accepts password below minimum length**
+
+**Description:**
+The registration form allows users to create an account using a password shorter than the minimum required length.
+
+**Steps to Reproduce:**
+1. Access the registration page
+2. Enter a valid email
+3. Enter a password shorter than the minimum requirement (e.g., 4 characters)
+4. Click on "Register"
+
+**Expected Result:**
+The system should display a validation message indicating insufficient password length.
+
+**Actual Result:**
+The system completes the registration and logs the user in.
+
+**Severity:** High
+**Priority:** High
+**Status:** Open
+**Attachments:** Screenshot of successful registration with short password
+
+---
+
+**BUG-03 – Password confirmation mismatch is not validated**
+
+**Description:**
+The system does not validate whether the password confirmation matches the original password during registration.
+
+**Steps to Reproduce:**
+1. Access the registration page
+2. Enter valid user data
+3. Enter a password
+4. Enter a different password in the confirmation field
+5. Click on "Register"
+
+**Expected Result:**
+The system should display an error message indicating password mismatch.
+
+**Actual Result:**
+No validation message is shown. The page becomes unresponsive and reloads as a blank page.
+
+**Severity:** Medium
+**Priority:** High
+**Status:** Open
+**Attachments:** Video showing page freeze and blank screen
+
+---
+
+**BUG-04 – Email field accepts invalid format
+
+**Description:**
+The email input field accepts invalid email formats during registration or login.
+
+**Steps to Reproduce:**
+1. Access the login or registration page
+2. Enter an invalid email format (e.g., useremail.com)
+3. Submit the form
+
+**Expected Result:**
+The system should block the action and display a message indicating invalid email format.
+
+**Actual Result:**
+The system allows login or registration without any error message.
+
+**Severity:** High
+**Priority:** High
+**Status:** Open
+**Attachments:** Screenshot showing invalid email accepted
+
+---
+
+**BUG-05 – System creates user with invalid data**
+
+**Description:**
+The registration process does not validate mandatory fields and allows user creation with invalid data.
+
+**Steps to Reproduce:**
+1. Access the registration page
+2. Enter invalid data (e.g., email without '@', numbers in name field)
+3. Click on "Register"
+
+**Expected Result:**
+The system should highlight invalid fields and display validation messages.
+
+**Actual Result:**
+The system accepts invalid data and redirects the user to the home page.
+
+**Severity:** High
+**Priority:** High
+**Status:** Open
+**Attachments:** Screenshot of profile created with invalid data
+
+---
+
+**BUG-06 – Technical error (500) exposed to user after registration**
+
+**Description:**
+After submitting the registration form, the system refreshes and displays a technical error to the user.
+
+**Steps to Reproduce:**
+1. Access the registration page
+2. Fill in valid registration data
+3. Click on "Register"
+4. Wait for the page reload
+
+**Expected Result:**
+The system should complete registration and redirect the user to the home page.
+
+**Actual Result:*8
+The system displays a technical error message (500 Internal Server Error).
+
+**Severity:** High
+**Priority:** High
+**Status:** Open
+**Attachments:** Screenshot showing exposed error code
+
+---
