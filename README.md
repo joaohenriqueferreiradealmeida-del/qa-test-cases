@@ -19,30 +19,18 @@ The test cases are written to reflect real-world QA scenarios, focusing on clari
 
 ## 📁 Repository Structure
 
-qa-test-cases/
-├── cart/
-│   └── cart-tests.md
-├── checkout/
-│   └── checkout-payment-tests.md
-├── login/
-│   └── login-tests.md
-├── signup/
-│   └── signup-tests.md
-├── upload/
-│   └── upload-tests.md
-├── README.md
-└── bug-reports.md
+qa-test-cases/ ├── API/                     # API test cases (manual or advanced) ├── availability/            # Availability / accessibility related tests ├── cart/                    # Cart feature test cases │   └── cart-tests.md ├── checkout/                # Checkout and payment test cases │   └── checkout-payment-tests.md ├── login/                   # Login feature test cases │   └── login-tests.md ├── non-functional/          # Non-functional tests (performance, security, etc.) ├── signup/                  # User registration (signup) tests │   └── signup-tests.md ├── upload/                  # Tests related to file upload functionality │   └── upload-tests.md ├── README.md                # Project overview and documentation └── bug-reports.md           # Summary of bug reports and issues found
 
 ## 🛠 Tools & Concepts
+
 - Manual Testing
 - Functional Testing
-- Positive, Negative and Edge Case Scenarios
-- Test Case Design Techniques
-- QA Documentation
+- Positive & Negative Scenarios
+- Edge Case Analysis
+- Test Case Documentation
+- Bug Reporting
 
 ## 🚀 About Me
-I am transitioning into the QA (Quality Assurance) field, focusing on manual testing and test case design.
+## 👤 About Me
 
-I am building this portfolio to demonstrate my ability to analyze requirements, think critically about edge cases, and document test scenarios in a clear and structured way.
-
-This repository will continue to evolve as I expand my knowledge and practical experience in QA.
+I am transitioning into the QA (Quality Assurance) field, focusing on manual testing, test case design, and learning test automation with Cypress. I build this portfolio to demonstrate my ability to analyze requirements, design test scenarios, document results clearly, and continuously improve quality practices.
