@@ -1,18 +1,21 @@
-**Authentication – Signup Bug Reports**
+**Bug Reports – Signup / User Registration**
 
 **Objective:**
-Identify defects in the user registration process, focusing on data validation, business rules, and proper user feedback during account creation.
+Identify functional, validation, and error-handling defects in the user registration flow, ensuring security, data integrity, compliance with business rules, and clear feedback to the user during account creation.
 
 **Scope:**
-These bug reports include:
-- Email validation
-- Password rules enforcement
+These bug reports focus on the **Authentication – Signup** module and include, but are not limited to:
+- Email format validation
+- Duplicate email registration prevention
+- Password rules enforcement (minimum length, complexity)
 - Password confirmation validation
-- Duplicate account prevention
+- Mandatory field validation
+- System error handling and user feedback
 
-**Out of scope:**
+**Out of Scope:**
 - Login functionality
-- Email verification flows
+- Email verification and activation flows
+- Password recovery flows
 
 **Test Environment:**
 - Application Type: Web Application
@@ -22,9 +25,10 @@ These bug reports include:
 - Environment: Test / Staging
 
 **Preconditions:**
-- System is online
-- Signup page is accessible
+- System is online and accessible
+- Signup (registration) page is available
 - User is not authenticated
+- User is using a supported browser
 
 **Test Type:**
 - Manual Testing
@@ -89,17 +93,6 @@ Page freezes or account is created without validation
 **Priority:** High
 **Status:** Open
 **Attachments:** Video showing form submission and page failure
-
----
-
-**Bug Reports – Signup / User Registration**
-
-**Objective:** Identify functional, validation and error handling failures in the user registration flow, ensuring security, data integrity and adequate feedback to the user.
-
-**General preconditions:**
-- Online and accessible system
-- Registration page available
-- User using supported browser
 
 ---
 
