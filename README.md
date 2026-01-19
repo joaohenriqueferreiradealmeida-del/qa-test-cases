@@ -19,7 +19,39 @@ The test cases are written to reflect real-world QA scenarios, focusing on clari
 
 ## 📁 Repository Structure
 
-qa-test-cases/ ├── API/                     # API test cases (manual or advanced) ├── availability/            # Availability / accessibility related tests ├── cart/                    # Cart feature test cases │   └── cart-tests.md ├── checkout/                # Checkout and payment test cases │   └── checkout-payment-tests.md ├── login/                   # Login feature test cases │   └── login-tests.md ├── non-functional/          # Non-functional tests (performance, security, etc.) ├── signup/                  # User registration (signup) tests │   └── signup-tests.md ├── upload/                  # Tests related to file upload functionality │   └── upload-tests.md ├── README.md                # Project overview and documentation └── bug-reports.md           # Summary of bug reports and issues found
+qa-test-cases/
+├── README.md
+├── test-cases/                       
+│   ├── auth/
+│   │   ├── login-tests.md
+│   │   └── signup-tests.md
+│   ├── cart/
+│   │   └── cart-tests.md
+│   ├── checkout/
+│   │   └── checkout-payment-tests.md
+│   ├── upload/
+│   │   └── upload-tests.md
+│   ├── non-functional/
+│   │   ├── performance-tests.md
+│   │   ├── accessibility-tests.md
+│   │   ├── security-tests.md
+│   │   └── responsiveness-tests.md
+│   └── api/
+│       ├── signup-api-tests.md
+│       └── api-advanced-tests.md
+├── bug-reports/
+│   ├── authentication/
+│   │   ├── login-bugs.md
+│   │   └── signup-bugs.md
+│   ├── cart/
+│   │   └── cart-bugs.md
+│   ├── security/
+│   │   └── security-bugs.md
+│   └── ux/
+│       └── ux-bugs.md
+└── docs/                             
+    ├── CONTRIBUTING.md
+    └── issue_template.md
 
 ## 🛠 Tools & Concepts
 
